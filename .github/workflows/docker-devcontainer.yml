@@ -33,15 +33,4 @@ jobs:
           no-cache: true
           push: true
 
-      # - name: Build image
-      #   run: |
-      #     docker build --no-cache \
-      #     --progress=plain \
-      #     --tag $DOCKER_USERNAME/pf-devcontainer:$IMAGE_TAG \
-      #     -/devcontainer/Dockerfile .
-
-      # - name: Push image to Docker Hub
-      #   run: |
-      #     docker push $DOCKER_USERNAME/pf-devcontainer:$IMAGE_TAG
-
 # Built with ❤ by [Pipeline Foundation](https://pipeline.foundation)
