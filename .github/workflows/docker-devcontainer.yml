@@ -31,7 +31,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          file: './docker-images/devcontainer/Dockerfile'
+          file: './images/devcontainer/Dockerfile'
           tags: $DOCKER_USERNAME/pf-devcontainer:$IMAGE_TAG
           no-cache: true
           push: true
