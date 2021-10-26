@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'docker-images/devcontainer/Dockerfile'
+      - 'images/devcontainer/Dockerfile'
   workflow_dispatch:
 
 jobs:
@@ -41,7 +41,7 @@ jobs:
       #     docker build --no-cache \
       #     --progress=plain \
       #     --tag $DOCKER_USERNAME/pf-devcontainer:$IMAGE_TAG \
-      #     --file docker-images/devcontainer/Dockerfile .
+      #     -/devcontainer/Dockerfile .
 
       # - name: Push image to Docker Hub
       #   run: |
