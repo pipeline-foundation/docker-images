@@ -12,9 +12,6 @@ jobs:
   build-and-push:
     name: Build and push image
     runs-on: ubuntu-20.04
-    env:
-      IMAGE_TAG: '1.0.0-alpine'
-      DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -32,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           file: './images/devcontainer/Dockerfile'
-          tags: "$DOCKER_USERNAME/pf-devcontainer:$IMAGE_TAG"
+          tags: "${{ secrets.DOCKERHUB_USERNAME }}/pf-devcontainer:1.0.0-alpine"
           no-cache: true
           push: true
 
