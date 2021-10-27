@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/vscode/devcontainers/base:0.202.2-alpine3.14
 
+ENV NODE_VERSION 16.12.0
+
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
     && apk add --no-cache \
